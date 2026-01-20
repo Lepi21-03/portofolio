@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Levi | Web Developer</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- Tailwind -->
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <!-- Font -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body class="bg-gray-950 text-gray-100">
+
+<!-- NAVBAR -->
+<nav class="fixed w-full bg-gray-950/80 backdrop-blur border-b border-gray-800 z-50">
+  <div class="max-w-7xl mx-auto px-6 py-4 flex justify-between">
+    <h1 class="font-bold text-xl">Levi</h1>
+    <ul class="hidden md:flex gap-8 text-gray-400">
+      <li><a href="#home" class="hover:text-white">Home</a></li>
+      <li><a href="#about" class="hover:text-white">About</a></li>
+      <li><a href="#projects" class="hover:text-white">Projects</a></li>
+      <li><a href="#contact" class="hover:text-white">Contact</a></li>
+    </ul>
+  </div>
+</nav>
+
+<!-- HERO -->
+<section id="home" class="min-h-screen flex items-center">
+  <div class="max-w-7xl mx-auto px-6 grid md:grid-cols-2 gap-12">
+    <div>
+      <h2 class="text-5xl font-bold mb-6">
+        Hi, I'm <span class="text-blue-500">Levi</span>
+      </h2>
+      <p class="text-gray-400 mb-8">
+        Siswa SMK Telekomunikasi Tunas Harapan Salatiga Jurusan PPLG Yang Sedikit Menguasai PHP, HTML, CSS
+      </p>
+      <a href="#projects"
+         class="bg-blue-600 hover:bg-blue-700 px-6 py-3 rounded-lg font-semibold">
+        View Projects
+      </a>
+    </div>
+    <div class="hidden md:flex justify-center">
+      <img src="assets/images/profile.png"
+           class="w-64 h-64 rounded-full object-cover">
+    </div>
+  </div>
+</section>
+
+<!-- ABOUT -->
+<section id="about" class="py-24 bg-gray-900">
+  <div class="max-w-4xl mx-auto text-center px-6">
+    <h3 class="text-3xl font-bold mb-6">About Me</h3>
+    <p class="text-gray-400 leading-relaxed">
+      Saya pelajar SMK Telekomunikasi Tunas Harapan Salatiga Jurusan PPLG Yang Menguasai HTML, CSS, PHP. Saya Memiliki Rasa Penasaran Yang Tinggi Terhadap Hal Baru Dan Saya Tidak Takut Mencoba Hal Baru.
+    </p>
+  </div>
+</section>
+
+<!-- PROJECTS -->
+<section id="projects" class="py-24">
+  <div class="max-w-7xl mx-auto px-6">
+    <h3 class="text-3xl font-bold text-center mb-12">My Projects</h3>
+
+    <div class="grid md:grid-cols-2 gap-10">
+
+      <!-- MARVEL PEDIA -->
+      <article class="bg-gray-900 border border-gray-800 rounded-2xl overflow-hidden hover:border-blue-500 transition">
+        <img src="assets/marvel.png" class="h-56 w-full object-cover">
+        <div class="p-6">
+          <span class="text-xs bg-blue-600/20 text-blue-400 px-3 py-1 rounded-full">
+            PHP • MVC • CRUD
+          </span>
+          <h4 class="text-xl font-bold mt-4 mb-2">Marvel Pedia</h4>
+          <p class="text-gray-400 text-sm mb-5">
+            Website ensiklopedia karakter Marvel berbasis PHP MVC
+            dengan fitur CRUD dan manajemen data.
+          </p>
+          <div class="flex gap-5 text-sm font-semibold">
+            <a href="https://marvelpedia.wuaze.com/" target="_blank" class="text-blue-500 hover:underline">
+              Live Demo
+            </a>
+          </div>
+        </div>
+      </article>
+
+      <!-- CALCULATOR -->
+      <article class="bg-gray-900 border border-gray-800 rounded-2xl overflow-hidden hover:border-blue-500 transition">
+        <img src="assets/kalkulator.png" class="h-56 w-full object-cover">
+        <div class="p-6">
+          <span class="text-xs bg-green-600/20 text-green-400 px-3 py-1 rounded-full">
+            HTML • CSS • JavaScript
+          </span>
+          <h4 class="text-xl font-bold mt-4 mb-2">Simple Calculator</h4>
+          <p class="text-gray-400 text-sm mb-5">
+            Kalkulator sederhana menggunakan JavaScript
+            dengan fokus DOM manipulation dan logic.
+          </p>
+          <div class="flex gap-5 text-sm font-semibold">
+            <a href="https://lepi21-03.github.io/calculator/" target="_blank" class="text-blue-500 hover:underline">
+              Live Demo
+            </a>
+          </div>
+        </div>
+      </article>
+
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section id="contact" class="py-24 bg-gray-900">
+  <div class="max-w-xl mx-auto px-6">
+    <h3 class="text-3xl font-bold text-center mb-8">Contact Me</h3>
+    <form class="space-y-5">
+      <input class="input" placeholder="Your Name">
+      <input class="input" placeholder="Your Email">
+      <textarea class="input h-32" placeholder="Your Message"></textarea>
+      <button class="w-full bg-blue-600 hover:bg-blue-700 py-3 rounded-lg font-semibold">
+        Send Message
+      </button>
+    </form>
+  </div>
+</section>
+
+<footer class="py-6 text-center text-gray-500 border-t border-gray-800">
+  © 2026 Levi
+</footer>
+
+<script src="js/main.js"></script>
+</body>
+</html>
