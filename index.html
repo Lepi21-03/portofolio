@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Levi | Porofolio</title>
+  <title>Levi | Portfolio</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
   <!-- Tailwind -->
@@ -10,6 +10,12 @@
 
   <!-- Font -->
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+
+  <!-- AOS -->
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 
   <link rel="stylesheet" href="css/style.css">
 </head>
@@ -29,80 +35,127 @@
 </nav>
 
 <!-- HERO -->
-<section id="home" class="min-h-screen flex items-center">
-  <div class="max-w-7xl mx-auto px-6 grid md:grid-cols-2 gap-12">
-    <div>
-      <h2 class="text-5xl font-bold mb-6">
-        Hi, I'm <span class="text-blue-500">Levi</span>
+<section id="home" class="min-h-screen flex items-center relative overflow-hidden">
+  <div class="max-w-7xl mx-auto px-6 grid md:grid-cols-2 gap-12 items-center relative z-10">
+    <div data-aos="fade-right">
+      <h2 class="text-6xl font-bold mb-6">
+        Hi, I'm <span class="text-gradient">Levi</span>
       </h2>
-      <p class="text-gray-400 mb-8">
-        Siswa SMK Telekomunikasi Tunas Harapan Salatiga Jurusan PPLG Yang Sedikit Menguasai PHP, HTML, CSS
+      <p class="text-xl text-gray-400 mb-8 leading-relaxed">
+        Siswa <span class="text-white font-semibold">SMK Telekomunikasi Tunas Harapan Salatiga</span> Jurusan PPLG.
+        Seorang antusias teknologi yang menguasai <span class="text-blue-400">PHP</span>, <span class="text-orange-400">HTML</span>, dan <span class="text-blue-300">CSS</span>.
       </p>
-      <a href="#projects"
-         class="bg-blue-600 hover:bg-blue-700 px-6 py-3 rounded-lg font-semibold">
-        View Projects
-      </a>
+      <div class="flex gap-4">
+        <a href="#projects"
+           class="bg-blue-600 hover:bg-blue-700 px-8 py-4 rounded-xl font-bold transition-all shadow-lg shadow-blue-600/20">
+          View Projects
+        </a>
+        <a href="#contact"
+           class="bg-gray-800 hover:bg-gray-700 px-8 py-4 rounded-xl font-bold transition-all border border-gray-700">
+          Contact Me
+        </a>
+      </div>
     </div>
-    <div class="hidden md:flex justify-center">
-      <img src="assets/kembaran.jpg"
-           class="w-64 h-64 rounded-full object-cover">
+    <div class="hidden md:flex justify-center relative" data-aos="zoom-in" data-aos-delay="200">
+      <div class="blob"></div>
+      <div class="relative group">
+        <div class="absolute -inset-1 bg-gradient-to-r from-blue-600 to-purple-600 rounded-full blur opacity-25 group-hover:opacity-50 transition duration-1000"></div>
+        <img src="assets/kembaran.jpg"
+             class="relative w-72 h-72 rounded-full object-cover border-4 border-gray-900 shadow-2xl">
+      </div>
     </div>
   </div>
 </section>
 
 <!-- ABOUT -->
-<section id="about" class="py-24 bg-gray-900">
-  <div class="max-w-4xl mx-auto text-center px-6">
-    <h3 class="text-3xl font-bold mb-6">About Me</h3>
-    <p class="text-gray-400 leading-relaxed">
-      Saya pelajar SMK Telekomunikasi Tunas Harapan Salatiga Jurusan PPLG Yang Menguasai HTML, CSS, PHP. Saya Memiliki Rasa Penasaran Yang Tinggi Terhadap Hal Baru Dan Saya Tidak Takut Mencoba Hal Baru.
-    </p>
+<section id="about" class="py-24 bg-gray-900/50">
+  <div class="max-w-4xl mx-auto px-6" data-aos="fade-up">
+    <div class="text-center mb-16">
+      <h3 class="text-4xl font-bold mb-6">About Me</h3>
+      <div class="w-20 h-1.5 bg-blue-600 mx-auto rounded-full"></div>
+    </div>
+
+    <div class="grid md:grid-cols-2 gap-12 items-center">
+      <p class="text-gray-400 text-lg leading-relaxed">
+        Saya pelajar <span class="text-white">SMK Telekomunikasi Tunas Harapan Salatiga</span> Jurusan PPLG.
+        Memiliki gairah besar dalam pengembangan web dan desain. Saya memiliki rasa penasaran yang tinggi terhadap hal baru dan selalu berusaha meningkatkan kemampuan saya setiap harinya.
+      </p>
+
+      <div class="grid grid-cols-3 gap-6 text-center">
+        <div class="p-4 bg-gray-800 rounded-2xl border border-gray-700 hover:border-blue-500 transition-colors">
+          <i class="fab fa-html5 text-4xl text-orange-500 mb-2"></i>
+          <p class="text-xs font-bold">HTML5</p>
+        </div>
+        <div class="p-4 bg-gray-800 rounded-2xl border border-gray-700 hover:border-blue-500 transition-colors">
+          <i class="fab fa-css3-alt text-4xl text-blue-500 mb-2"></i>
+          <p class="text-xs font-bold">CSS3</p>
+        </div>
+        <div class="p-4 bg-gray-800 rounded-2xl border border-gray-700 hover:border-blue-500 transition-colors">
+          <i class="fab fa-php text-4xl text-blue-400 mb-2"></i>
+          <p class="text-xs font-bold">PHP</p>
+        </div>
+      </div>
+    </div>
   </div>
 </section>
 
 <!-- PROJECTS -->
 <section id="projects" class="py-24">
   <div class="max-w-7xl mx-auto px-6">
-    <h3 class="text-3xl font-bold text-center mb-12">My Projects</h3>
+    <div class="text-center mb-16" data-aos="fade-up">
+      <h3 class="text-4xl font-bold mb-6">My Projects</h3>
+      <div class="w-20 h-1.5 bg-blue-600 mx-auto rounded-full"></div>
+    </div>
 
     <div class="grid md:grid-cols-2 gap-10">
 
       <!-- MARVEL PEDIA -->
-      <article class="bg-gray-900 border border-gray-800 rounded-2xl overflow-hidden hover:border-blue-500 transition">
-        <img src="assets/marvel.png" class="h-56 w-full object-cover">
-        <div class="p-6">
-          <span class="text-xs bg-blue-600/20 text-blue-400 px-3 py-1 rounded-full">
-            PHP • MVC • CRUD
-          </span>
-          <h4 class="text-xl font-bold mt-4 mb-2">Marvel Pedia</h4>
-          <p class="text-gray-400 text-sm mb-5">
-            Website Karakter Marvel Berbasis PHP MVC
-            Dengan Fitur CRUD.
-          </p>
-          <div class="flex gap-5 text-sm font-semibold">
-            <a href="https://marvelpedia.wuaze.com/" target="_blank" class="text-blue-500 hover:underline">
-              Live Demo
-            </a>
+      <article class="glass rounded-3xl overflow-hidden hover:scale-[1.02] transition-all duration-500 group" data-aos="fade-up">
+        <div class="relative overflow-hidden">
+          <img src="assets/marvel.png" class="h-64 w-full object-cover group-hover:scale-110 transition-transform duration-500">
+          <div class="absolute inset-0 bg-gradient-to-t from-gray-950/80 to-transparent opacity-0 group-hover:opacity-100 transition-opacity"></div>
+        </div>
+        <div class="p-8">
+          <div class="flex gap-3 mb-4">
+            <span class="text-[10px] uppercase tracking-widest bg-blue-600/20 text-blue-400 px-3 py-1 rounded-full font-bold">
+              <i class="fab fa-php mr-1"></i> PHP MVC
+            </span>
+            <span class="text-[10px] uppercase tracking-widest bg-purple-600/20 text-purple-400 px-3 py-1 rounded-full font-bold">
+              <i class="fas fa-database mr-1"></i> CRUD
+            </span>
           </div>
+          <h4 class="text-2xl font-bold mb-3 group-hover:text-blue-400 transition-colors">Marvel Pedia</h4>
+          <p class="text-gray-400 leading-relaxed mb-6">
+            Website ensiklopedia karakter Marvel yang dibangun dengan arsitektur PHP MVC dan fitur manajemen data lengkap.
+          </p>
+          <a href="https://marvelpedia.wuaze.com/" target="_blank" class="inline-flex items-center gap-2 text-blue-500 font-bold hover:gap-4 transition-all">
+            Live Demo <i class="fas fa-external-link-alt text-sm"></i>
+          </a>
         </div>
       </article>
 
       <!-- CALCULATOR -->
-      <article class="bg-gray-900 border border-gray-800 rounded-2xl overflow-hidden hover:border-blue-500 transition">
-        <img src="assets/kalkulator.png" class="h-56 w-full object-cover">
-        <div class="p-6">
-          <span class="text-xs bg-green-600/20 text-green-400 px-3 py-1 rounded-full">
-            HTML • CSS • JavaScript
-          </span>
-          <h4 class="text-xl font-bold mt-4 mb-2">Simple Calculator</h4>
-          <p class="text-gray-400 text-sm mb-5">
-            Kalkulator Sederhana Menggunakan JavaScript
-          </p>
-          <div class="flex gap-5 text-sm font-semibold">
-            <a href="https://lepi21-03.github.io/calculator/" target="_blank" class="text-blue-500 hover:underline">
-              Live Demo
-            </a>
+      <article class="glass rounded-3xl overflow-hidden hover:scale-[1.02] transition-all duration-500 group" data-aos="fade-up" data-aos-delay="200">
+        <div class="relative overflow-hidden">
+          <img src="assets/kalkulator.png" class="h-64 w-full object-cover group-hover:scale-110 transition-transform duration-500">
+          <div class="absolute inset-0 bg-gradient-to-t from-gray-950/80 to-transparent opacity-0 group-hover:opacity-100 transition-opacity"></div>
+        </div>
+        <div class="p-8">
+          <div class="flex gap-3 mb-4">
+            <span class="text-[10px] uppercase tracking-widest bg-yellow-600/20 text-yellow-400 px-3 py-1 rounded-full font-bold">
+              <i class="fab fa-js mr-1"></i> JavaScript
+            </span>
+            <span class="text-[10px] uppercase tracking-widest bg-orange-600/20 text-orange-400 px-3 py-1 rounded-full font-bold">
+              <i class="fab fa-html5 mr-1"></i> HTML/CSS
+            </span>
           </div>
+          <h4 class="text-2xl font-bold mb-3 group-hover:text-blue-400 transition-colors">Simple Calculator</h4>
+          <p class="text-gray-400 leading-relaxed mb-6">
+            Aplikasi kalkulator interaktif dengan desain bersih, memproses operasi aritmatika secara real-time.
+          </p>
+          <a href="https://lepi21-03.github.io/calculator/" target="_blank" class="inline-flex items-center gap-2 text-blue-500 font-bold hover:gap-4 transition-all">
+            Live Demo <i class="fas fa-external-link-alt text-sm"></i>
+          </a>
         </div>
       </article>
 
@@ -111,25 +164,63 @@
 </section>
 
 <!-- CONTACT -->
-<section id="contact" class="py-24 bg-gray-900">
-  <div class="max-w-xl mx-auto px-6">
-    <h3 class="text-3xl font-bold text-center mb-8">Contact Me</h3>
-    <form class="space-y-5">
-      <input class="input" placeholder="Your Name">
-      <input class="input" placeholder="Your Email">
-      <textarea class="input h-32" placeholder="Your Message"></textarea>
-      <button class="w-full bg-blue-600 hover:bg-blue-700 py-3 rounded-lg font-semibold">
-        Send Message
-      </button>
-    </form>
+<section id="contact" class="py-24 bg-gray-900/50">
+  <div class="max-w-xl mx-auto px-6" data-aos="fade-up">
+    <div class="text-center mb-12">
+      <h3 class="text-4xl font-bold mb-6">Contact Me</h3>
+      <div class="w-20 h-1.5 bg-blue-600 mx-auto rounded-full"></div>
+    </div>
+
+    <div class="glass p-8 rounded-3xl">
+      <form class="space-y-5">
+        <div>
+          <label class="block text-sm font-semibold mb-2 ml-1 text-gray-400">Full Name</label>
+          <input class="input" placeholder="Enter your name">
+        </div>
+        <div>
+          <label class="block text-sm font-semibold mb-2 ml-1 text-gray-400">Email Address</label>
+          <input class="input" placeholder="Enter your email">
+        </div>
+        <div>
+          <label class="block text-sm font-semibold mb-2 ml-1 text-gray-400">Message</label>
+          <textarea class="input h-32" placeholder="Tell me about your project"></textarea>
+        </div>
+        <button class="w-full bg-blue-600 hover:bg-blue-700 py-4 rounded-xl font-bold transition-all shadow-lg shadow-blue-600/20 active:scale-95">
+          Send Message <i class="fas fa-paper-plane ml-2"></i>
+        </button>
+      </form>
+    </div>
   </div>
 </section>
 
-<footer class="py-6 text-center text-gray-500 border-t border-gray-800">
-  © 2026 Levi
+<footer class="py-12 bg-gray-950 text-center border-t border-gray-800">
+  <div class="max-w-7xl mx-auto px-6">
+    <h2 class="text-2xl font-bold mb-8 text-gradient">Levi</h2>
+    <div class="flex justify-center gap-6 mb-8 text-2xl">
+      <a href="https://github.com/lepi21-03" target="_blank" class="text-gray-500 hover:text-white transition-colors">
+        <i class="fab fa-github"></i>
+      </a>
+      <a href="https://instagram.com/lepi_21.03" target="_blank" class="text-gray-500 hover:text-pink-500 transition-colors">
+        <i class="fab fa-instagram"></i>
+      </a>
+      <a href="#" class="text-gray-500 hover:text-blue-500 transition-colors">
+        <i class="fab fa-linkedin"></i>
+      </a>
+    </div>
+    <p class="text-gray-500 text-sm">
+      &copy; 2026 Levi. All rights reserved.
+    </p>
+  </div>
 </footer>
+
+<!-- AOS JS -->
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script>
+  AOS.init({
+    duration: 1000,
+    once: true,
+  });
+</script>
 
 </body>
 </html>
-
-
